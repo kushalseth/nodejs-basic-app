@@ -1,0 +1,67 @@
+@import "styles/variables.scss";
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    height: 200px;
+    border-bottom: 3px solid var($border-black);
+
+    &__image {
+        flex: 30%;
+        border-radius: 5px;
+        margin-right: 15px;
+
+        &__grey {
+            opacity: 0.4;
+            filter: alpha(opacity=40);
+            background-color: var($border-black);
+        }
+    }
+
+    &__description {
+        flex: 60%;
+
+        &__text {
+            margin-right: 5px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        flex-direction: column;
+        flex: 10%;
+
+        &__controls {
+            display: flex;
+            justify-content: flex-end;
+
+            &__edit {
+                margin-right: 10px;
+            }
+
+            &__delete {
+                cursor: pointer;
+            }
+
+            &__booking {
+                cursor: pointer;
+                margin-top: auto;
+            }
+        }
+
+
+    }
+}
+
+.wrapper:last-child {
+    border: none;
+}
+
+.wrapper:hover {
+    background-color: #cfcfcf;
+}

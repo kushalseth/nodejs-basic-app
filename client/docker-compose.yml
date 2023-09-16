@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  nextapp:
+    container_name: room-planner-frontend
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000

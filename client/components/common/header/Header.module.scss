@@ -1,0 +1,18 @@
+@import "styles/variables.scss";
+
+.header {
+  &__title {
+    padding: 0;
+    margin: 0;
+    border-top: 3px solid #7BA398;
+    border-bottom: 3px solid #7BA398;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+}

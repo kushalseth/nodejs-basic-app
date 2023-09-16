@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  nextapp:
+    container_name: room-planner-front
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+
+  nextapp-backend:
+    container_name: room-planner-back
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - 4000:4000
+    depends_on:
+      - mongodb
+
+  mongodb:
+    container_name: database
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
